@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form id="calculator" action="/calculator/calculate" method="post">
+        <input type="text" value="0" name="a">
+        <select name="symbol">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" value="0" name="b">
+        =
+        <input type="text" value="0" id="result">
+        <button type="submit">CALCULATE</button>
+    </form>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}
