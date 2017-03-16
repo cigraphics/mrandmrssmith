@@ -1,8 +1,4 @@
-var $result = null;
-
 $(document).ready(function () {
-    $result = $("#result");
-
     $("#calculator").on("submit", function (e) {
         e.preventDefault();
 
